@@ -1,10 +1,18 @@
 <?php
 
 function connectionBD(){
+
     $host = "mysql-clubbasket.alwaysdata.net";
     $dbname = "clubbasket_auth";
     $username = "388209";
     $password = "Agaboubou65$";
+
+    /*
+    $host = "localhost";
+    $dbname = "clubbasket_auth";
+    $username = "root";
+    $password = "root";
+*/
 
 
 ///Connexion au serveur MySQL
@@ -15,6 +23,12 @@ function connectionBD(){
     }
     return $linkpdo;
 
+}
+try {
+    $pdo = connectionBD();
+    echo "Connexion réussie à la base de données.";
+} catch (Exception $e) {
+    echo "Erreur de connexion à la base de données: " . $e->getMessage();
 }
 
 ?>

@@ -33,7 +33,7 @@ try {
     $pdo = connectionBD();
 
     // Préparation de la requête
-    $sql = "SELECT * FROM utilisateur WHERE Nom = :Nom, Prenom = :Prenom";
+    $sql = "SELECT * FROM utilisateur WHERE Nom = :Nom AND Prenom = :Prenom";
     $stmt = $pdo->prepare($sql);
 
     // Exécution de la requête
