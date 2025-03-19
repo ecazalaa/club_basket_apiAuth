@@ -12,7 +12,6 @@ require_once 'response.php';
 
 // Vérification de la méthode HTTP
 $http_method = $_SERVER['REQUEST_METHOD'];
-
 if($http_method !== 'POST') {
     http_response_code(405);
     deliver_response(405, "Méthode non autorisée", null);

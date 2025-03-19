@@ -14,7 +14,7 @@ function deliver_response($status_code, $status_message, $data = null) {
     $response['status_message'] = $status_message;
     $response['status'] = ($status_code >= 200 && $status_code < 300) ? 'success' : 'error';
     $response['data'] = $data;
-    $response['title'] = "<h1>Bienvenue à l'API Club Basket</h1>";
+    $response['title'] = "Bienvenue a l'API d'authentification de Romeo et Emile";
 
     // Encodage de la réponse au format JSON
     $json_response = json_encode($response);
