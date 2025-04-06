@@ -1,4 +1,5 @@
 <?php
+require_once 'cors.php';
 require_once'jwt_utils.php';
 require_once 'connexion_bd.php';
 require_once 'response.php';

@@ -6,8 +6,9 @@ function deliver_response($status_code, $status_message, $data = null) {
     // Indique au client le format de la réponse
     header("Access-Control-Allow-Origin: *");
     header("Access-Control-Allow-Methods: GET, POST, DELETE, PUT, OPTIONS");
-    header("Access-Control-Allow-Headers: Content-Type, Authorization");
+    header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization");
     header("Content-Type:application/json; charset=utf-8");
+    header('Access-Control-Max-Age: 3600');
 
     // Création du tableau de réponse
     $response['status_code'] = $status_code;
